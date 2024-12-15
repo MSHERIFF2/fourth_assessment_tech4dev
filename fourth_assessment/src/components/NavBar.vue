@@ -39,7 +39,7 @@ export default {
 
 ul li {
   list-style-type: none;
-    margin: 12px;
+  margin: 12px;
 }
 
 ul {
@@ -54,14 +54,43 @@ ul {
   width: 250px;
 
 }
-button:nth-child(even){
+
+button:nth-child(even) {
   color: white;
-    background-color: purple;
-    border: none;
-    border-radius: 5px;
+  background-color: purple;
+  border: none;
+  border-radius: 5px;
 }
-button:nth-child(odd){
+
+button:nth-child(odd) {
   border: none;
   background-color: aliceblue;
+}
+
+/* Styling for mobile view */
+
+@media screen and (max-width:420px) {
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    height: fit-content;
+    align-items: center;
+
+
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .acct {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
 }
 </style>

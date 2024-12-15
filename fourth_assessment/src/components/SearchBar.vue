@@ -42,4 +42,12 @@ button{
     border-radius: 10px;
     padding: 5px;
 }
+@media screen and (max-width:420px) {
+    .search{
+        display: flex;
+        flex-direction: column;
+        
+    
+    }
+}
 </style>

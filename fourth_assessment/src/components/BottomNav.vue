@@ -35,5 +35,13 @@ h1{
     width: 470px;
     color: #FFFFFF;
 }
+@media screen and (max-width:420px) {
+    .bottomNav{
+        display: flex;
+        flex-direction: column;
+    justify-content: space-between;
+    
+    }
+}
 
 </style>
