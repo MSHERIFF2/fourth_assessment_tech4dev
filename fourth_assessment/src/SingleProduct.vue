@@ -4,7 +4,7 @@
       <img :src="product.image" alt="">
       <p>{{ product.description }}</p>
       <p>Price: {{ product.price }}</p>
-      <button>Add to Cart</button>
+      <button @click="message">Add to Cart</button>
     </div>
   </template>
   
@@ -20,7 +20,14 @@
         .then(res => res.json())
         .then(data => this.product = data)
         .catch(error => console.error(error))
+    },
+
+    methods: {
+      message(){
+        alert("Add to cart Successfully")
+      }
     }
+
   }
   </script>
 
@@ -53,6 +60,20 @@
     font-size: 14px;
     padding: 20px;
     text-align: justify;
+}
+.wrapper button{
+  background-color: purple;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  margin: auto;
+  display: block;
+  margin-bottom: 15px;
+  padding: 14px;
+  cursor: pointer;
+
+
 }
    
 </style>
