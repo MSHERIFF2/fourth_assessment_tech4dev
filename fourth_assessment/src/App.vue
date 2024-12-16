@@ -5,19 +5,7 @@
   </div>
 </template>
 
-<script>
-import Home from './components/index.vue'
-import SingleProduct from './SingleProduct.vue';
 
-
-export default {
-  name: 'App',
-  components: {
-   Home,
-   SingleProduct
-  }
-}
-</script>
 
 <style scoped>
 #app {

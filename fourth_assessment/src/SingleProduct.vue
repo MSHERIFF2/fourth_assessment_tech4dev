@@ -3,7 +3,7 @@
     <h3>{{ product.title }}</h3>
     <img :src="product.image" alt="">
     <p>{{ product.description }}</p>
-    <p class="price">Price: NGN{{ product.price }}</p>
+    <p class="price">Price: $ {{ product.price }}</p>
     <button @click="message">Add to Cart</button>
   </div>
 </template>
@@ -57,6 +57,13 @@ export default {
   margin: 15px;
   text-align: center;
 }
+.price {
+    background-color: purple;
+    color: white;
+    font-size: 32px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  
+  }
 
 .wrapper p {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -79,10 +86,5 @@ export default {
   cursor: pointer;
 }
 
-.price {
-    background-color: purple;
-    color: white;
-    font-size: 32px;
-  }
 
 </style>
