@@ -27,13 +27,7 @@ export default {
             .then(res => res.json())
             .then(data => this.products = data)
             .catch(error => console.error(error))
-    },
-    methods:{
-        viewProduct(id) {
-      this.$root.Home = false
-      this.$root.productId = id
     }
-  }
 }
 
 
