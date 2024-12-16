@@ -6,7 +6,7 @@
                 <h3>{{ product.title }}</h3>
                 <span>{{ product.category }}</span>
                 <p>{{ product.description }}</p>
-                <a :href="product.id" class="view">view details</a>
+                <router-link :to="{ name: 'SingleProduct', params: { id: product.id } }" class="view">View Details</router-link>
             </div>
 
         </div>
@@ -27,8 +27,17 @@ export default {
             .then(res => res.json())
             .then(data => this.products = data)
             .catch(error => console.error(error))
+    },
+    methods:{
+        viewProduct(id) {
+      this.$root.Home = false
+      this.$root.productId = id
     }
+  }
 }
+
+
+
 </script>
 <style scoped>
 .wrapper {
