@@ -83,6 +83,7 @@ export default {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-decoration: none;
     margin-left: 15px;
+    margin-bottom: 15px;
 }
 .view:hover{
     cursor: pointer;
