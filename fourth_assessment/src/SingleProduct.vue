@@ -1,11 +1,16 @@
 <template>
-  <div class="wrapper">
-    <h3>{{ product.title }}</h3>
-    <img :src="product.image" alt="">
-    <p>{{ product.description }}</p>
-    <p class="price">Price: $ {{ product.price }}</p>
-    <button @click="message">Add to Cart</button>
+  <div class="container">
+    <router-link :to="{ name: 'Home' }" class="home">Home</router-link>
+    <div class="wrapper">
+      <h3>{{ product.title }}</h3>
+      <img :src="product.image" alt="">
+      <p>{{ product.description }}</p>
+      <p class="price">Price: $ {{ product.price }}</p>
+      <button @click="message">Add to Cart</button>
+    </div>
+
   </div>
+
 </template>
 
 <script>
@@ -57,13 +62,14 @@ export default {
   margin: 15px;
   text-align: center;
 }
+
 .price {
-    background-color: purple;
-    color: white;
-    font-size: 32px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  
-  }
+  background-color: purple;
+  color: white;
+  font-size: 32px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
 
 .wrapper p {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -85,6 +91,7 @@ export default {
   padding: 14px;
   cursor: pointer;
 }
-
-
+.home{
+  text-decoration: none;
+}
 </style>
